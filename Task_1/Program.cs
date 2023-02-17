@@ -5,7 +5,6 @@
 Console.Clear();
 
 // Создаем массив случайных чисел:
-
 int[] GetArray(int lengt, int min, int max)
 {
 int[] array = new int[lengt];
@@ -18,7 +17,6 @@ return array;
 }
 
 // Решение:
-
 int CountEvenInArray(int[] array)
 {
     int count = 0;
@@ -28,10 +26,11 @@ int CountEvenInArray(int[] array)
     }
     return count;
 }
+
+// Параметры массива:
 int[] array = GetArray(4, 100, 999);
 
 // Печать:
-
 Console.Write("Массив: ");
 Console.WriteLine(string.Join(" ", array));
 Console.WriteLine($"Количество четных элементов: {CountEvenInArray(array)}");
