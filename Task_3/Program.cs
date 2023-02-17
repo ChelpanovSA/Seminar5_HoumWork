@@ -4,11 +4,14 @@
 
 Console.Clear();
 
+// Определяем длину интервала, дробных чисел
 double RandomDouble(int minBorder, int maxBorder)
 {
     double RandomDouble = new Random().NextDouble() * (maxBorder - minBorder);
     return RandomDouble;
 }
+
+// Массив случайных дробных чисел
 
 double[] RandomArray(int lengt, int minBorder, int maxBorder)
 {
@@ -16,6 +19,8 @@ double[] RandomArray(int lengt, int minBorder, int maxBorder)
     for (int i = 0; i < lengt; i++) array[i] = RandomDouble(minBorder, maxBorder);
     return array;
 }
+  
+// Решение
 
 void SumMinMax(double[] array)
 {
@@ -26,10 +31,14 @@ void SumMinMax(double[] array)
         else if (array[i] > max) max = array[i];
     }
     total = min + max;
+    // // Печать данных массива:
     Console.WriteLine($"min = {min} ; max = {max}");
     Console.WriteLine($"min + max = {total}");
 }
 
+// Параметры массива:
 double[] randomArray = RandomArray(5, 1, 10);
+
+// Печать:
 Console.WriteLine(string.Join(" ", randomArray));
 SumMinMax(randomArray);
